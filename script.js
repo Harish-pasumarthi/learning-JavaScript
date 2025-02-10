@@ -1,194 +1,280 @@
-/*let js = "amazing";
-//if (js == "amazing") alert("js is really fun");
-console.log(40 + 8 + 23 - 10);
+("use strict");
 
-console.log("harish");
+/*
+function sayHello() {
+  console.log("Hello!");
+}
+sayHello(); 
 
-let firstName = "harish Pasumarthi";
-console.log(firstName);
+function add(a, b) {
+  return a + b;
+}
+let result = add(2, 3);
+console.log(result); // result = 5
 
-let person = "jonas";
-console.log(typeof person);
+console.log(fruitProcessor(5, 0));
+function fruitProcessor(apples, oranges) {
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
 
-let myFirstJob = "Programmer";
-let currentJob = "teacher";
-//variables should be clear and descriptive
-let country = "india";
-let population = 121;
-let isIsland = false;
-let language;
-console.log(typeof isIsland);
-console.log(typeof country);
-console.log(typeof population);
-console.log(typeof language); 
-let a = 5;
-let b = 5;
-let c = a / b;
-console.log(c);
+function calcAge(birthYear) {
+  return 2037 - birthYear;
+}
+const age1 = calcAge(2002);
+console.log(age1);
 
-let age = 30;
-age = 31; //we mutate a age variable here
+//function expression
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(2002);
+console.log(age2);
 
-const birthYear = 2000;
-// birthYear = 2002;
+function calcAge(birthYear) {
+  return 2037 - birthYear;
+}
 
-const job = 0;
+//ARROW
+const calcAge1 = (birthYear) => 2037 - birthYear;
+console.log(`Hi ${calcAge1(2002)}`);
+
+console.log(this); // In a browser, this logs the `window` object
+
+function mixIngredients() {
+  console.log("Mixing flour, sugar, and eggs...");
+}
+
+function bakeCake() {
+  console.log("Baking the cake at 350°F...");
+}
+
+function makeCake() {
+  mixIngredients(); // Call the first function
+  bakeCake(); // Call the second function
+  console.log("Cake is ready! 🎂");
+}
+
+makeCake();
+
+// ARRAYS
+const friends = ["ram", "steven", "peter"];
+console.log(friends);
+
+// const years = new Array(1991, 2002, 2000, 2025);
+
+console.log(friends[0]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "jay";
+console.log(friends);
+
+//EXERCISE
+
+const calcAge = function (birthYear) {
+  return 2025 - birthYear;
+};
+const years = [1990, 1967, 2002, 2000, 2025];
+// const age1 = calcAge(years[2]);
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[2]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
+
+const array1 = [1, 2, 3, 4, 5];
+console.log(array1);
+
+console.log(array1.pop());
+console.log(array1);
+
+console.log(array1.push(6));
+console.log(array1);
+
+//OBJECTS
+const harish = ["harish", "pasumarhti", 22, "BIET"];
 
 
-const language = "telugu";
-const country = "India";
-const continent = "Asia";
-const isIsland = false;
-isIsland = true;
+// console.log(hari);
+// console.log(hari.firstName);
+// console.log(hari["lastName"]);
 
-population = 10;
-console.log(population / 2);
-population++;
-console.log(population);
-country = "india";
-continent = "Asia";
-language = "telugu";
-const description1 =
-  country +
-  " is in " +
-  continent +
-  ", and its " +
-  population +
-  " million people speak " +
-  language;
+// const peru = "Name";
+// console.log(hari["first" + peru]);
 
-console.log(description1);
+// const interestedIn = prompt(
+//   `what do you want to know about hari? choose b/w firstName, lastName, age and job`
+// );
 
-const now = 2035;
-const ageHarish = now - 2002;
-const ageAnu = now - 2000;
+// if (hari[interestedIn]) {
+//   console.log(hari[interestedIn]);
+// } else {
+//   console.warn(`choose b/w firstName, lastName, age and job`);
+// }
+
+
+hari.location = "India";
+hari["instagram"] = "@harish_pasumarthi";
+
+console.log(hari.friends);
+
+//Challenge
 console.log(
-  "The age of harish in 2035 is " + ageHarish,
-  "and anu is " + ageAnu
+  `${hari.firstName} has ${hari.friends.length} friends, and his best friend is ${hari.friends[0]}`
 );
 
-const firstName = "Harish";
-const lastName = "Pasumarthi";
-console.log(firstName + " " + lastName);
 
-let x = 10 - 5;
-x += 10;
-console.log(x);
-// console.warn("This is an error!");
+const hari = {
+  firstName: "Harish",
+  lastName: "Pasumarthi",
+  birthYear: 2002,
+  job: "dev",
+  friends: ["rama", "venu", "gopi"],
+  hasDriverLicense: true,
 
+  calcAge: function () {
+    this.age = 2025 - this.birthYear;
+    return this.age;
+  },
 
-// Comparison operators
-console.log(5 > 4);
-let message = `This is line 1. 
-This is line 2.
-This is line 3.
-`;
-console.log(message);
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    }, and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`;
+  },
+};
 
-let isConfirmed = confirm("Do you want to continue?");
-console.log(isConfirmed); // true if OK, false if Cancel
+console.log(hari.getSummary());
 
-const age = prompt("Enter your age: ");
-const isOldEnough = age >= 18;
-
-if (isOldEnough) {
-  console.log(`Sarah can start driving license ⛽`);
-} else {
-  const yearsLeft = 18 - age;
-  console.log(`Sarah is too young. Wait another ${yearsLeft} more years`);
-}
-const birthYear = 2002;
-let century;
-if (birthYear <= 2000) {
-  century = 20;
-} else {
-  century = 21;
-}
-console.log(century);
-
-let num = 10;
-
-// Convert number to string
-let strNum = String(num);
-console.log(strNum, typeof strNum); // "10" string
-
-// Convert string to number
-let numStr = "123";
-let num2 = Number(numStr);
-console.log(num2, typeof num2); // 123 number
-
-// Convert to boolean
-console.log(Boolean(1)); // true
-console.log(Boolean(0)); // false
-console.log(Boolean("")); // false
-console.log(Boolean("hello")); // true
-// 5 falsy values: 0, '', undefined, null, NaN
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean("jonas"));
-console.log(Boolean({}));
-
-console.log("9" - "5"); // ->4
-console.log("19" - "13" + "17"); // ->617
-console.log("19" - "13" + 17); // ->23
-console.log("123" < 57); // ->false
-console.log(5 + 6 + "4" + 9 - 4 - 2); // ->1143
-
-console.log("5" == 5); // true
-console.log("5" === 5); // false
-console.log(true == 1); // true
-console.log(false == 0); // true
-console.log(null == undefined); // true
-console.log(null === undefined); // false
-
-console.log("10" + 5); // 105
-console.log("10" - 5); // 5
-console.log("10" * 2); // 20
-console.log("10" / 2); // 5
-console.log("10" * "2"); // 20
-console.log("10" - "hello"); // NaN
-
-console.log(Boolean("Hello")); // true
-console.log(Boolean("")); // false
-console.log(Boolean(0)); // false
-console.log(Boolean(1)); // true
-console.log(Boolean(-1)); // true
-console.log(Boolean(null)); // false
-console.log(Boolean(undefined)); //false
-console.log(Boolean([])); // true
-console.log(Boolean({})); // true
-
-console.log("123" < 57); // false
-console.log("123" > "57"); // false
-console.log("apple" > "banana"); // false
-console.log("5" > 2); // true
-console.log("5" < "12"); // false
-console.log("5" - true); // 4
-console.log("5" - false); // 5
-console.log("5" + true); // 5true
-console.log(5 + true); // 6
-console.log("5" + false); // 5false
-
-const hasDriversLicense = true; //A
-const hasGoodVision = true; //B
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-
-//SWITCH CASE
-const day = "monday";
-
-switch (day) {
-  case "monday":
-    console.log("it's monday");
-    break;
-  case "tuesday":
-    console.log("it's tuesday");
-    break;
-  case "wednesday":
-    console.log("it's wednesday");
-    break;
+for (let rep = 1; rep <= 5; rep++) {
+  console.log(`hi ${rep} time 🔥`);
 }
 
-console.log(5 < 3 ? "Correct" : 5 === 5 ? "Equal" : "Wrong"); // ?
+
+
+const types = [];
+
+// console.log(`-------------------------`);
+
+// for (arr of jonasArray) {
+//   console.log(arr);
+// }
+
+// console.log(`-------------------------`);
+
+for (let i = 0; i < 5; i++) {
+  //READING FORM JONAS ARRAY
+  // console.log(jonasArray[i], typeof jonasArray[i]);
+
+  //FILLING TYPES ARRAY
+  types[i] = typeof jonasArray[i];
+  console.log(types[i]);
+}
+console.log(types);
+
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+
+//continue and break
+const jonas = [
+  "Jonas",
+  "Schmedtman",
+  2037 - 1991,
+  "teacher",
+  ["Michel", "Peter", "Steven"],
+];
+
+console.log(`------strings only-------`);
+for (let i = 0; i < 5; i++) {
+  if (typeof jonas[i] !== "string") continue;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+for (i = 1; i <= 10; i++) {
+  if (i == 5) continue;
+  console.log(`this is not effected by continue: ${i}`);
+}
+
+
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+// Nested loop to iterate through a 2D array
+for (let i = 0; i < matrix.length; i++) {
+  for (let j = 0; j < matrix[i].length; j++) {
+    console.log(matrix[j]); // Output: 1, 2, 3, 4, 5, 6, 7, 8, 9
+  }
+}
+
+for (let rep = 1; rep <= 3; rep++) {
+  console.log(`lifting weights repetition ${rep} 🎽`);
+}
+
+let rep = 1;
+while (rep <= 3) {
+  console.log(`lifting weights repetition ${rep} 🎽`);
+  rep++;
+}
+
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+}
+
+function rollDice() {
+  return Math.trunc(Math.random() * 6) + 1;
+}
+
+let dice = rollDice(); // Initial roll
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = rollDice(); // Re-roll
+}
+
+console.log("You rolled a 6!");
 */
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+/* Write your code below. Good luck! 🙂 */
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i of arr) {
+    sum += i;
+  }
+  return sum / arr.length;
+};
+
+console.log(calcAverage(tips));
