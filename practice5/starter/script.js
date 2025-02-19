@@ -16,8 +16,9 @@ document.querySelector('.check').addEventListener('click', function () {
 //SYNTAX---->  addEventListener('event', function());
 */
 //GAME LOGIC
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highScore = 0;
 
 const checkNumber = function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -32,6 +33,9 @@ const checkNumber = function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#2dde12';
     document.querySelector('.number').style.width = '30rem';
+    //hightscore logic
+    if (score > highScore) highScore = score;
+    document.querySelector('.highscore').textContent = highScore;
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Too High';
@@ -58,3 +62,14 @@ const checkNumber = function () {
 document.querySelector('.check').addEventListener('click', checkNumber);
 
 //Creating the game reset functionality. when ever the user clicks the againbutton it loads the new game
+const resetGame = function () {
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.guess').textContent = '0';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = '20';
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+};
+document.querySelector('.again').addEventListener('click', resetGame);
