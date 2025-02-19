@@ -31,6 +31,7 @@ const checkNumber = function () {
     document.querySelector('.message').textContent = '🏆 Correct Answer';
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = 'green';
+    document.querySelector('.number').style.margin = '30px 60px';
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Too High';
