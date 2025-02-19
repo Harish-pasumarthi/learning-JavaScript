@@ -56,3 +56,5 @@ const checkNumber = function () {
 };
 //the above function for this line
 document.querySelector('.check').addEventListener('click', checkNumber);
+
+//Creating the game reset functionality. when ever the user clicks the againbutton it loads the new game
