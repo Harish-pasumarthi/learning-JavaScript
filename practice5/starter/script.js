@@ -30,6 +30,7 @@ const checkNumber = function () {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🏆 Correct Answer';
     document.querySelector('.number').textContent = secretNumber;
+    document.querySelector('body').style.backgroundColor = 'green';
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Too High';
