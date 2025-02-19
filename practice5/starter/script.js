@@ -8,4 +8,11 @@ document.querySelector('.score').textContent = 3;
 
 document.querySelector('.guess').value = 5;
 console.log(document.querySelector('.guess').value);
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess);
+  console.log(typeof guess);
+});
+//SYNTAX---->  addEventListener('event', function());
 */
+//GAME LOGIC
