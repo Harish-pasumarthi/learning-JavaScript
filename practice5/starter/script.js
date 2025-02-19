@@ -54,5 +54,5 @@ const checkNumber = function () {
     }
   }
 };
-
+//the above function for this line
 document.querySelector('.check').addEventListener('click', checkNumber);
