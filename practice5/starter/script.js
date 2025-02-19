@@ -22,8 +22,11 @@ let score = 20;
 const checkNumber = function () {
   const guess = Number(document.querySelector('.guess').value);
 
+  //When there is no input
   if (!guess) {
     document.querySelector('.message').textContent = '📛 No Number';
+
+    //when player wins
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🏆 Correct Answer';
     document.querySelector('.number').textContent = secretNumber;
