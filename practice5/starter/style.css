@@ -119,3 +119,63 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+/* FOR MOBILE SCREEN */
+@media (max-width: 600px) {
+  header {
+    height: 25vh;
+    border-bottom: 5px solid #eee;
+  }
+
+  h1 {
+    font-size: 2rem;
+    top: 50%;
+  }
+
+  .number {
+    font-size: 4rem;
+    width: 10rem;
+    padding: 2rem 0;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 75vh;
+  }
+
+  .left,
+  .right {
+    width: 90%;
+  }
+
+  .guess {
+    font-size: 3rem;
+    padding: 1.5rem;
+    width: 80%;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 1.5rem 2.5rem;
+  }
+  .check {
+    margin-bottom: 20px;
+    border-radius: 5%;
+  }
+
+  .message {
+    margin-bottom: 5rem;
+  }
+
+  .between,
+  .again {
+    font-size: 1rem;
+    top: 1rem;
+  }
+  .again {
+    border-radius: 5%;
+    font-size: 1.3rem;
+  }
+}
