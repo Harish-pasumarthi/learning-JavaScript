@@ -23,13 +23,18 @@ let highScore = 0;
 const checkNumber = function () {
   const guess = Number(document.querySelector('.guess').value);
 
+  //playSound function for all sounds
+  const playSound = className => {
+    const audio = document.querySelector(className);
+    audio.play();
+  };
+
   //When there is no input
   if (!guess) {
-    document.querySelector('.message').textContent = '📛 No Number';
+    document.querySelector('.message').textContent = '🚫 No Number';
     document.querySelector('.guess').style.backgroundColor = '#cf0000';
     // Play the sound:
-    const noNumberSound = document.querySelector('.noNumberSound');
-    noNumberSound.play();
+    playSound('.noNumberSound');
     //-------------------------------------------------
 
     //when player wins
@@ -44,13 +49,15 @@ const checkNumber = function () {
     document.querySelector('.highscore').textContent = highScore;
 
     // Play the sound:
-    const winSound = document.querySelector('.winSound');
-    winSound.play();
+    playSound('.winSound');
     //-------------------------------------------------
-  } else if (guess > secretNumber) {
+
+    //when guess is wrong
+  } else if (guess !== secretNumber) {
     document.querySelector('.guess').style.backgroundColor = '';
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Too High';
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? '📈 Too High' : '📉 Too Low';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -58,23 +65,7 @@ const checkNumber = function () {
       document.querySelector('body').style.backgroundColor = '#cf0000';
       document.querySelector('.score').textContent = 0;
       // Play the sound:
-      const lostSound = document.querySelector('.lostSound');
-      lostSound.play();
-      //-------------------------------------------------
-    }
-  } else if (guess < secretNumber) {
-    document.querySelector('.guess').style.backgroundColor = '';
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📉 Too Low';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = '👎🏻 You Lost the game!';
-      document.querySelector('body').style.backgroundColor = '#cf0000';
-      document.querySelector('.score').textContent = 0;
-      // Play the sound:
-      const lostSound = document.querySelector('.lostSound');
-      lostSound.play();
+      playSound('.lostSound');
       //-------------------------------------------------
     }
   }
@@ -82,7 +73,7 @@ const checkNumber = function () {
 //the above function for this line
 document.querySelector('.check').addEventListener('click', checkNumber);
 
-//Creating the game reset functionality. when ever the user clicks the againbutton it loads the new game
+//Creating the game reset functionality. when ever the user clicks the again button it loads the new game
 const resetGame = function () {
   score = 20;
   document.querySelector('.score').textContent = score;
