@@ -26,6 +26,10 @@ const checkNumber = function () {
   //When there is no input
   if (!guess) {
     document.querySelector('.message').textContent = '📛 No Number';
+    // Play the sound:
+    const noNumberSound = document.querySelector('.noNumberSound');
+    noNumberSound.play();
+    //-------------------------------------------------
 
     //when player wins
   } else if (guess === secretNumber) {
@@ -36,6 +40,11 @@ const checkNumber = function () {
     //hightscore logic
     if (score > highScore) highScore = score;
     document.querySelector('.highscore').textContent = highScore;
+
+    // Play the sound:
+    const winSound = document.querySelector('.winSound');
+    winSound.play();
+    //-------------------------------------------------
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Too High';
@@ -45,6 +54,10 @@ const checkNumber = function () {
       document.querySelector('.message').textContent = '👎🏻 You Lost the game!';
       document.querySelector('body').style.backgroundColor = '#cf0000';
       document.querySelector('.score').textContent = 0;
+      // Play the sound:
+      const lostSound = document.querySelector('.lostSound');
+      lostSound.play();
+      //-------------------------------------------------
     }
   } else if (guess < secretNumber) {
     if (score > 1) {
@@ -55,6 +68,10 @@ const checkNumber = function () {
       document.querySelector('.message').textContent = '👎🏻 You Lost the game!';
       document.querySelector('body').style.backgroundColor = '#cf0000';
       document.querySelector('.score').textContent = 0;
+      // Play the sound:
+      const lostSound = document.querySelector('.lostSound');
+      lostSound.play();
+      //-------------------------------------------------
     }
   }
 };
@@ -63,13 +80,18 @@ document.querySelector('.check').addEventListener('click', checkNumber);
 
 //Creating the game reset functionality. when ever the user clicks the againbutton it loads the new game
 const resetGame = function () {
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.number').textContent = '?';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.guess').textContent = '0';
-  document.querySelector('.message').textContent = 'Start guessing...';
-  document.querySelector('.score').textContent = '20';
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
-  score = 20;
+  document.querySelector('.guess').value = null;
+
+  // Play the sound:
+  const newGame = document.querySelector('.newGame');
+  newGame.play();
+  //-------------------------------------------------
 };
 document.querySelector('.again').addEventListener('click', resetGame);
