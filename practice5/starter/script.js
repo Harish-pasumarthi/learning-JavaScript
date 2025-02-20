@@ -26,6 +26,7 @@ const checkNumber = function () {
   //When there is no input
   if (!guess) {
     document.querySelector('.message').textContent = '📛 No Number';
+    document.querySelector('.guess').style.backgroundColor = '#cf0000';
     // Play the sound:
     const noNumberSound = document.querySelector('.noNumberSound');
     noNumberSound.play();
@@ -37,6 +38,7 @@ const checkNumber = function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#2dde12';
     document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.guess').style.backgroundColor = '';
     //hightscore logic
     if (score > highScore) highScore = score;
     document.querySelector('.highscore').textContent = highScore;
@@ -46,6 +48,7 @@ const checkNumber = function () {
     winSound.play();
     //-------------------------------------------------
   } else if (guess > secretNumber) {
+    document.querySelector('.guess').style.backgroundColor = '';
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Too High';
       score--;
@@ -60,6 +63,7 @@ const checkNumber = function () {
       //-------------------------------------------------
     }
   } else if (guess < secretNumber) {
+    document.querySelector('.guess').style.backgroundColor = '';
     if (score > 1) {
       document.querySelector('.message').textContent = '📉 Too Low';
       score--;
@@ -87,6 +91,7 @@ const resetGame = function () {
   document.querySelector('.number').textContent = '?';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.guess').style.backgroundColor = '';
   document.querySelector('.guess').value = null;
 
   // Play the sound:
