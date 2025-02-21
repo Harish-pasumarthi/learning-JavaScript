@@ -35,6 +35,7 @@ const checkNumber = function () {
     playSound('.winSound'); // Play the sound:
     //when guess is wrong
   } else if (guess !== secretNumber) {
+    playSound('.wrongGuess');
     document.querySelector('.guess').style.backgroundColor = '';
     if (score > 1) {
       displayMessage(guess > secretNumber ? '📈 Too High' : '📉 Too Low');
