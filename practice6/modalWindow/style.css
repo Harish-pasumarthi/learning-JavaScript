@@ -13,12 +13,12 @@ body {
   font-family: sans-serif;
   color: #333;
   line-height: 1.5;
-  height: 100vh;
+  height: 40vh;
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background: linear-gradient(to top left, #28b487, #7dd56f);
+  background: linear-gradient(to bottom right, #000000, #e2da37);
 }
 
 .show-modal {
