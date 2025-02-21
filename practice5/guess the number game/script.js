@@ -48,8 +48,14 @@ const checkNumber = function () {
     }
   }
 };
-//the above function for this line
+//Click event for the button(check)
 document.querySelector('.check').addEventListener('click', checkNumber);
+//Enter key event for the entire document
+document.querySelector('.guess').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    checkNumber();
+  }
+});
 
 //Creating the game reset functionality. when ever the user clicks the again button it loads the new game
 const resetGame = function () {
