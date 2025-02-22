@@ -20,6 +20,13 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
+//Enter key event for the entire document
+document.querySelector('.guess').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    checkNumber();
+  }
+});
+
 //function checks the guess number correct or wrong
 const checkNumber = function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -35,6 +42,14 @@ const checkNumber = function () {
     document.querySelector('body').style.backgroundColor = '#2dde12';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.guess').style.backgroundColor = '';
+
+    //confetti celebration logic when guess is correct
+    confetti({
+      particleCount: 200,
+      spread: 200,
+      origin: { y: 0.7 },
+    });
+
     //hightscore logic
     if (score > highScore) highScore = score;
     document.querySelector('.highscore').textContent = highScore;
@@ -57,12 +72,6 @@ const checkNumber = function () {
 };
 //Click event for the button(check)
 document.querySelector('.check').addEventListener('click', checkNumber);
-//Enter key event for the entire document
-document.querySelector('.guess').addEventListener('keydown', function (event) {
-  if (event.key === 'Enter') {
-    checkNumber();
-  }
-});
 
 //Creating the game reset functionality. when ever the user clicks the again button it loads the new game
 const resetGame = function () {
