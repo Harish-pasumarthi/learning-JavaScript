@@ -1,5 +1,11 @@
 'use strict';
 
+//voice Instructions
+const textToSpeak =
+  "Welcome to Guess the Number! I'm thinking of a number between 1 and 20. Try to guess it in as few attempts as possible. I'll tell you if your guess is too high or too low. Good luck!";
+const utterance = new SpeechSynthesisUtterance(textToSpeak);
+window.speechSynthesis.speak(utterance);
+
 //GAME LOGIC
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
