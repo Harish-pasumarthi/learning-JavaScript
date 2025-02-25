@@ -14,10 +14,17 @@ const openModal = function () {
   overlay.classList.remove('hidden');
 };
 
+// const escPress = function (event) {  //not very efficient compared to the below function
+//   if (event.key === 'Escape') {
+//     closeModal();
+//   }
+// };
+
 const escPress = function (event) {
   if (event.key === 'Escape') {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
+    if (!modal.classList.contains('hidden')) {
+      closeModal();
+    }
   }
 };
 
@@ -29,7 +36,7 @@ btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', escPress);
 
-document.addEventListener('keydown', function (e) {
-  console.log(e);
-  if (e.key === 'd') console.log('Hi nenu D ni');
-});
+// document.addEventListener('keydown', function (e) {
+//   console.log(e);
+//   if (e.key === 'd') console.log('Hi nenu D ni');
+// });
