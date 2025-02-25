@@ -28,3 +28,8 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', escPress);
+
+document.addEventListener('keydown', function (e) {
+  console.log(e);
+  if (e.key === 'd') console.log('Hi nenu D ni');
+});
