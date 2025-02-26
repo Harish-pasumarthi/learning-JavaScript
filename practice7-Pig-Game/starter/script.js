@@ -13,6 +13,9 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+//A POP-UP For Game Instructions
+window.alert(`REACH 100 POINTS 🪙 TO WIN THE GAME 🫱🏻‍🫲🏻`);
+
 //Starting Conditions
 score0El.textContent = 0;
 score1El.textContent = 0;
@@ -66,7 +69,7 @@ btnHold.addEventListener('click', function () {
     scores[activePlayer] += currentScore;
     document.querySelector(`#score--${activePlayer}`).textContent =
       scores[activePlayer];
-    // 2. Check if player's score is >=100 if true finish the game
+    // 2. Check if player's score is >=100 if true finish the game✅✅
     if (scores[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add('hidden');
@@ -76,6 +79,8 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      //A window alert to win player
+      window.alert(`PLAYER ${activePlayer + 1} WON THE GAME 🏆`);
     } else {
       // switch to the next player
       switchPlayer();
