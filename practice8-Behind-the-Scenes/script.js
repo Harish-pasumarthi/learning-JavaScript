@@ -33,14 +33,14 @@
 // obj2.func();
 // obj1.func()
 
-const fun = function () {
-  console.log(this);
-};
+// const fun = function () {
+//   console.log(this);
+// };
 
-fun();
+// fun();
 
-const fun1 = () => {
-  console.log(this);
-};
+// const fun1 = () => {
+//   console.log(this);
+// };
 
-fun1();
+// fun1();
