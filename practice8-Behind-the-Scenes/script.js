@@ -15,3 +15,5 @@ hell();
 function hell() {
   console.log('hi');
 }
+
+console.log(this);
