@@ -1,16 +1,19 @@
-"use strict";
+"use strict"; // Enable strict mode
 
 const createCouter = function () {
   let count = 0;
   return {
     reset: function () {
       count = 0;
+      return count; // Return the updated count
     },
     increment: function () {
       count++;
+      return count; // Return the updated count
     },
     decrement: function () {
       count--;
+      return count; // Return the updated count
     },
   };
 };
