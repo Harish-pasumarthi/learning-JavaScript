@@ -9,20 +9,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 100vh;
         margin: 0;
         font-family: Arial, sans-serif;
       }
 
       h1 {
-        font-size: 10rem;
+        font-size: 6rem;
         margin: 0 1rem;
-      }
-
-      button {
-        background: none;
-        border: none;
-        cursor: pointer;
       }
 
       img {
@@ -32,10 +27,15 @@
   </head>
   <body>
     <h1>0</h1>
-    <button class="reset"><img src="reset.png" alt="reset" /></button>
-    <button class="decrease"><img src="decrease.png" alt="increase" /></button>
-    <button class="increase"><img src="increase.png" alt="decrease" /></button>
-
+    <div>
+      <button class="reset"><img src="reset.png" alt="reset" /></button>
+      <button class="decrease">
+        <img src="decrease.png" alt="increase" />
+      </button>
+      <button class="increase">
+        <img src="increase.png" alt="decrease" />
+      </button>
+    </div>
     <script src="counter.js"></script>
   </body>
 </html>
