@@ -1,4 +1,5 @@
-strictMode = true;
+"use strict";
+
 const createCouter = function () {
   let count = 0;
   return {
