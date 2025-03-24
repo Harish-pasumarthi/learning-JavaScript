@@ -49,6 +49,18 @@ const restaurant = {
   },
 };
 
+//Destructuring OBJECTS
+// const { name, openingHours, categories } = restaurant;
+// const {
+//   name: restaurenName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+
+// console.log(restaurenName, hours, tags);
+// const { fri } = hours;
+// console.log(fri);
+//-------------------------------------------------------------------
 // Calling the order
 // const [start, main] = restaurant.order(1, 0);
 // console.log(start, main);
