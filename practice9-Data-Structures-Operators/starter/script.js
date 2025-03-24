@@ -44,4 +44,29 @@ const restaurant = {
       close: 24,
     },
   },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
+
+// Calling the order
+const [start, main] = restaurant.order(1, 0);
+console.log(start, main);
+
+//-----------------------------------------------------------------
+// Normal and not efficient way to access the values of array
+// const array = [1, 2, 3];
+// const a = array[0];
+// const b = array[1];
+// const c = array[2];
+// console.log(a, b, c);
+
+//Modern and efficient way to access array elements
+// const newArray = [1, 2, 3];
+// const [x, y, z] = newArray;
+// console.log(x, y, z);
+
+//------------------------------------------------------------------
+
+// Working wiht the nested array
+const nestedArray = ['out', 'out', ['in', 'in']];
