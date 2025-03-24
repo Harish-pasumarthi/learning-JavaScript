@@ -50,8 +50,8 @@ const restaurant = {
 };
 
 // Calling the order
-const [start, main] = restaurant.order(1, 0);
-console.log(start, main);
+// const [start, main] = restaurant.order(1, 0);
+// console.log(start, main);
 
 //-----------------------------------------------------------------
 // Normal and not efficient way to access the values of array
@@ -68,5 +68,7 @@ console.log(start, main);
 
 //------------------------------------------------------------------
 
-// Working wiht the nested array
+// Working wiht the nested array using destructuring
 const nestedArray = ['out', 'out', ['in', 'in']];
+const [a, b, [c, d]] = nestedArray;
+console.log(a, b, c, d);
