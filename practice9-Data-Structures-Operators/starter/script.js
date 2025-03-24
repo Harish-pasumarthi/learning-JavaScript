@@ -69,6 +69,8 @@ const restaurant = {
 //------------------------------------------------------------------
 
 // Working wiht the nested array using destructuring
-const nestedArray = ['out', 'out', ['in', 'in']];
-const [a, b, [c, d]] = nestedArray;
-console.log(a, b, c, d);
+// const nestedArray = ['out', 'out', ['in', 'in']];
+// const [a, b, [c, d]] = nestedArray;
+// console.log(a, b, c, d);
+
+//------------------------------------------------------------------
