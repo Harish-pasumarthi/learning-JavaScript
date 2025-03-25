@@ -364,3 +364,11 @@ console.log(`The Lenght of the Books is : ${books.length}`);
 //   console.log(i);
 // }
 // console.log('' && false);
+
+// const guest = {
+//   name: 'hari',
+//   owner: 'ramu',
+// };
+// guest.owner &&= 'amu';
+// console.log(guest);
+// console.log(guest.owner);
