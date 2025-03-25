@@ -331,12 +331,12 @@ console.log(`The Lenght of the Books is : ${books.length}`);
 // let bookAuthor = 'unknown';
 // ({ title: bookTitle, author: bookAuthor } = books[0]);
 // console.log(bookTitle, bookAuthor);
-const {
-  thirdParty: {
-    goodreads: { rating: bookRating },
-  },
-} = books[0];
-console.log(bookRating);
+// const {
+//   thirdParty: {
+//     goodreads: { rating: bookRating },
+//   },
+// } = books[0];
+// console.log(bookRating);
 //----------------------------------------------------------------
 
 //Destructure the books array into two variables called firstBook and secondBook.
