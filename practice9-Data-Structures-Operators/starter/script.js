@@ -356,3 +356,10 @@ console.log(`The Lenght of the Books is : ${books.length}`);
 // const ratingStars = [63405, 1808];
 // const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 // console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const arrMain = [...arr1, ...arr2];
+// console.log(arrMain);
+// for (const i of arrMain) {
+//   console.log(i);
+// }
