@@ -444,3 +444,21 @@ const allPlayers = [...players1, ...players2];
 //4
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 // console.log(players1Final);
+//5
+// const [team1, draw, team2] = game.odds;
+// console.log(game.odds);
+
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+// console.log(team1, draw, team2);
+
+// 6.
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+// printGoals('hari');
+// 7.
+// players1 < players2 && console.log('Team 1 is more likely to win');
+// players1 > players2 && console.log('Team 2 is more likely to win');
