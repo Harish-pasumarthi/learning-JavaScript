@@ -454,10 +454,10 @@ const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 // console.log(team1, draw, team2);
 
 // 6.
-const printGoals = function (...players) {
-  console.log(players);
-  console.log(`${players.length} goals were scored`);
-};
+// const printGoals = function (...players) {
+//   console.log(players);
+//   console.log(`${players.length} goals were scored`);
+// };
 // printGoals('hari');
 // 7.
 // players1 < players2 && console.log('Team 1 is more likely to win');
