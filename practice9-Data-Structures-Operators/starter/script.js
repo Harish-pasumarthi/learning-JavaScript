@@ -45,9 +45,11 @@ const restaurant = {
     },
   },
   order: function (starterIndex, mainIndex) {
+    console.log(this);
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
+// console.log(restaurant.openingHours.thu.open);
 
 //Destructuring OBJECTS
 // const { name, openingHours, categories } = restaurant;
