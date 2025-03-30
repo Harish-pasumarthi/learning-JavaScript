@@ -45,7 +45,7 @@ const restaurant = {
     },
   },
   order: function (starterIndex, mainIndex) {
-    console.log(this);
+    // console.log(this);
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
