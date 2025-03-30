@@ -50,7 +50,7 @@ const restaurant = {
   },
 };
 
-console.log(restaurant.order(1, 2));
+// console.log(restaurant.order(1, 2));
 // console.log(restaurant.openingHours.thu.open);
 
 //Destructuring OBJECTS
