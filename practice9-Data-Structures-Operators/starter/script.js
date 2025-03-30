@@ -49,6 +49,8 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
+
+console.log(restaurant.order(1, 2));
 // console.log(restaurant.openingHours.thu.open);
 
 //Destructuring OBJECTS
