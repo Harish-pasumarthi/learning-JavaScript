@@ -462,3 +462,11 @@ const game = {
 // 7.
 // players1 < players2 && console.log('Team 1 is more likely to win');
 // players1 > players2 && console.log('Team 2 is more likely to win');
+// const key = 'score';
+
+// const student = {
+//   name: 'John',
+//   [key]: 95, // Computed property → becomes "score": 95
+// };
+
+// console.log(student.score); // Output: 95
