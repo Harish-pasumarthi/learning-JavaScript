@@ -475,11 +475,11 @@ const game = {
 
 // console.log(student.score); // Output: 95
 
-const user = {};
-console.log(user);
+// const user = {};
+// console.log(user);
 
-user.name = 'hari';
-console.log(user);
+// user.name = 'hari';
+// console.log(user);
 
-delete user.name;
-console.log(user);
+// delete user.name;
+// console.log(user);
