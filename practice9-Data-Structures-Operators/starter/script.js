@@ -595,3 +595,8 @@ GOOD LUCK 😀
 // console.log(myset);
 // myset.add(4);
 // console.log(myset);
+
+// const nums = [1, 2, 2, 3];
+// const set = new Set(nums); // Set {1, 2, 3}
+// console.log(set.size);
+// console.log(nums.length);
