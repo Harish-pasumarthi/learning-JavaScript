@@ -553,6 +553,10 @@ GOOD LUCK 😀
 //   console.log(`Goal ${goalNumber}: ${player}`);
 // }
 
+//1 OPTIMIZED
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
+
 //2
 // let sum = 0;
 // const odds = Object.values(game.odds);
