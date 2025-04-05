@@ -577,3 +577,10 @@ GOOD LUCK 😀
 //   const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`;
 //   console.log(`odd of ${teamStr}: ${value}`);
 // }
+
+//BONUS
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] = (scorers[player] || 0) + 1;
+// }
+// console.log(scorers);
