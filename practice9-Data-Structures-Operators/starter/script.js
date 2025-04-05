@@ -547,11 +547,11 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 //1
-let goalNumber = 0;
-for (const player of game.scored) {
-  goalNumber++;
-  console.log(`Goal ${goalNumber}: ${player}`);
-}
+// let goalNumber = 0;
+// for (const player of game.scored) {
+//   goalNumber++;
+//   console.log(`Goal ${goalNumber}: ${player}`);
+// }
 
 //2
 // let sum = 0;
