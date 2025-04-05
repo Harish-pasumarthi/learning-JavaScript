@@ -588,3 +588,10 @@ GOOD LUCK 😀
 //   scorers[player] = (scorers[player] || 0) + 1;
 // }
 // console.log(scorers);
+
+// const myset = new Set([1, 2, 2, 3]);
+// console.log(myset);
+// myset.add(4);
+// console.log(myset);
+// myset.add(4);
+// console.log(myset);
