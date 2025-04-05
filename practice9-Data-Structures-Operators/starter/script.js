@@ -611,3 +611,8 @@ const mexicanFoods = new Set([
   'avocado',
   'garlic',
 ]);
+
+// const A = new set([1, 2, 3]);
+// const B = new set([3, 4, 5]);
+// const differ = A.difference(B);
+// console.log(differ);
