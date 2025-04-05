@@ -554,3 +554,21 @@ for (const player of game.scored) {
 }
 
 //2
+let sum = 0;
+const odds = Object.values(game.odds);
+for (const odd of odds) {
+  sum += odd;
+}
+const average = sum / odds.length;
+console.log(`Average odd: ${average}`);
+
+//3
+for (const odd in game.odds) {
+  if (odd === 'x') {
+    console.log(`Odd of draw: ${game.odds.x}`);
+  } else if (odd === `team1`) {
+    console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+  } else {
+    console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+  }
+}
