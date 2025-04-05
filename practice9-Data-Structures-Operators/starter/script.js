@@ -600,3 +600,14 @@ GOOD LUCK 😀
 // const set = new Set(nums); // Set {1, 2, 3}
 // console.log(set.size);
 // console.log(nums.length);
+
+// const num = [1, 2, 3, 4, 5];
+
+// const uniNum = new Set(num);
+// console.log(uniNum);
+
+// const uniNum2 = [new Set(num)];
+// console.log(uniNum2);
+
+// const uniNum3 = [...new Set(num)];
+// console.log(uniNum3);
