@@ -572,7 +572,8 @@ GOOD LUCK 😀
 //     console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
 //   }
 // }
-for (const [key, value] of Object.entries(game.odds)) {
-  const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`;
-  console.log(`odd of ${teamStr}: ${value}`);
-}
+//3 Clean and Optimal
+// for (const [key, value] of Object.entries(game.odds)) {
+//   const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`;
+//   console.log(`odd of ${teamStr}: ${value}`);
+// }
