@@ -618,3 +618,18 @@ GOOD LUCK 😀
 // console.log(differ);
 
 // TOPIC- MAPS FUNDAMENTALS
+// const users = new Map();
+// users.set(101, 'Alice');
+// users.set(102, 'Bob');
+
+// // 1. Get user 102
+// console.log(users.get(102));
+// // 2. Check if 103 exists
+// console.log(users.has(103));
+// // 3. Loop and print all users
+// for (const user of users) {
+//   console.log(user);
+// }
+// for (const [id, name] of users) {
+//   console.log(`ID: ${id}, Name: ${name}`);
+// }
