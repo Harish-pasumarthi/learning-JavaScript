@@ -616,3 +616,5 @@ GOOD LUCK 😀
 // const B = new set([3, 4, 5]);
 // const differ = A.difference(B);
 // console.log(differ);
+
+// TOPIC- MAPS FUNDAMENTALS
