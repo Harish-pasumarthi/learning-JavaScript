@@ -633,3 +633,7 @@ GOOD LUCK 😀
 // for (const [id, name] of users) {
 //   console.log(`ID: ${id}, Name: ${name}`);
 // }
+const rest = new Map();
+console.log(rest);
+rest.set([1, 2], 'hi');
+// console.log(rest.get(1));
