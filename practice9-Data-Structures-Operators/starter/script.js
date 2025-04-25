@@ -637,3 +637,13 @@ GOOD LUCK 😀
 // console.log(rest);
 // rest.set([1, 2], 'hi');
 // console.log(rest.get(1));
+// const question = new Map([
+//   ['question', 'what is the best programming laguage in the world'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'correct🏆'],
+//   [false, 'Try again!!??'],
+// ]);
+// console.log(question);
