@@ -674,3 +674,6 @@ const gameEvents = new Map([
   [80, '⚽️ GOAL'],
   [92, '🔶 Yellow card'],
 ]);
+
+const events = new Set([...gameEvents.values()]);
+console.log(events);
