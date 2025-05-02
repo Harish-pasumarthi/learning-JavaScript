@@ -700,3 +700,6 @@ GOOD LUCK 😀
 //   const half = min <= 45 ? 'FIRST' : 'SECOND';
 //   console.log(`[${half} HALF] ${min}: ${event}`);
 // }
+
+const airline = 'Air India';
+const plane = '21AP';
