@@ -734,3 +734,7 @@ const plane = '21AP';
 
 // const a = 'hi hello hi and hi';
 // console.log(a.replace(/hi/g, 'bye'));
+const name = 'Harish';
+console.log(name.includes('Hari'));
+console.log(name.startsWith('Hari'));
+console.log(name.endsWith('sh'));
