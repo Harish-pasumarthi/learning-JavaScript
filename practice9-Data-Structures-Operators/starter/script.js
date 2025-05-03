@@ -709,3 +709,13 @@ const plane = '21AP';
 // console.log(airline.lastIndexOf(' '));
 // console.log(airline.slice(airline.lastIndexOf(' ')));
 // console.log(airline.slice(-1));
+
+const checkMiddleSeat = function (s) {
+  const seat = s.slice(-1);
+  if (seat === 'B' || seat === 'E') {
+    console.log('You got a middle seat 😂');
+  } else console.log('You got Lucky 🫱🏻‍🫲🏻');
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('11A');
