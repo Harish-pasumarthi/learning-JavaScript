@@ -723,8 +723,11 @@ const plane = '21AP';
 // console.log(airline.toLowerCase());
 // console.log(airline.toUpperCase());
 
-const emailValidator = function (enterEmail) {
-  const validEmail = enterEmail.toLowerCase().trim();
-  console.log(`Here is your corrected Email ✅: ${validEmail}`);
-};
-emailValidator('  Hello@Gmail.Com \n');
+// const emailValidator = function (enterEmail) {
+//   const validEmail = enterEmail.toLowerCase().trim();
+//   console.log(`Here is your corrected Email ✅: ${validEmail}`);
+// };
+// emailValidator('  Hello@Gmail.Com \n');
+
+// const a = 'hi hello hi and hi';
+// console.log(a.replaceAll('hi', 'bye'));
