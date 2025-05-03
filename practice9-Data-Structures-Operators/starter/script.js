@@ -719,3 +719,6 @@ const plane = '21AP';
 
 // checkMiddleSeat('11B');
 // checkMiddleSeat('11A');
+
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
