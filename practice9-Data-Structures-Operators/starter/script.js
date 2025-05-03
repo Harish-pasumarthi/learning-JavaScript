@@ -713,8 +713,8 @@ const plane = '21AP';
 const checkMiddleSeat = function (s) {
   const seat = s.slice(-1);
   if (seat === 'B' || seat === 'E') {
-    console.log('You got a middle seat 😂');
-  } else console.log('You got Lucky 🫱🏻‍🫲🏻');
+    console.log(`Seat Number: ${s}, You got a middle seat 😂`);
+  } else console.log(`Seat Number: ${s}, You got Lucky 🫱🏻‍🫲🏻`);
 };
 
 checkMiddleSeat('11B');
