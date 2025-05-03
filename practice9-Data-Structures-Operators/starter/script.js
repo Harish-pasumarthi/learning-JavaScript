@@ -703,3 +703,9 @@ GOOD LUCK 😀
 
 const airline = 'Air India';
 const plane = '21AP';
+
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf());
+// console.log(airline.lastIndexOf(' '));
+// console.log(airline.slice(airline.lastIndexOf(' ')));
+// console.log(airline.slice(-1));
