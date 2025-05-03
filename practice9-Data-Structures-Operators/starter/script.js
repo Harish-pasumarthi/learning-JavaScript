@@ -731,3 +731,6 @@ const plane = '21AP';
 
 // const a = 'hi hello hi and hi';
 // console.log(a.replaceAll('hi', 'bye'));
+
+// const a = 'hi hello hi and hi';
+// console.log(a.replace(/hi/g, 'bye'));
