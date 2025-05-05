@@ -759,3 +759,6 @@ const plane = '21AP';
 // console.log(typeof updatedStr);
 
 // console.log(typeof updatedStr.join(' '));
+// const code = '29482908';
+// const mask = code.slice(-3).padStart(code.length, '`');
+// console.log(mask);
