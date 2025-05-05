@@ -747,3 +747,15 @@ const plane = '21AP';
 
 // const arr = ['a', 'b', 'c'];
 // console.log(arr.split(' '));
+
+// const str = 'harish is good'.split(' ');
+// console.log(str);
+// const updatedStr = [];
+
+// for (const i of str) {
+//   updatedStr.push(i[0].toUpperCase() + i.slice(1));
+// }
+// console.log(updatedStr);
+// console.log(typeof updatedStr);
+
+// console.log(typeof updatedStr.join(' '));
