@@ -739,11 +739,11 @@ const plane = '21AP';
 // console.log(name.startsWith('Hari'));
 // console.log(name.endsWith('sh'));
 
-const [firstName, lastName] = 'harish Pasumarthi';
-const newName = ['Mr.', firstName, lastName].join(' ');
-console.log(firstName);
-console.log(lastName);
-console.log(newName);
+// const [firstName, lastName] = 'harish Pasumarthi';
+// const newName = ['Mr.', firstName, lastName].join(' ');
+// console.log(firstName);
+// console.log(lastName);
+// console.log(newName);
 
 // const arr = ['a', 'b', 'c'];
 // console.log(arr.split(' '));
