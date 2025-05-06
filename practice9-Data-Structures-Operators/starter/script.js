@@ -834,6 +834,12 @@ const getCode = str => str.slice(0, 3).toUpperCase();
 
 for (const flight of flights.split('+')) {
   const [type, from, to, time] = flight.split(';');
+
+  // console.log(
+  //   type.startsWith('_Delayed') ? '🔴' : '',
+  //   type.replaceAll('_', ' ')
+  // );
+
   const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
     '_',
     ' '
