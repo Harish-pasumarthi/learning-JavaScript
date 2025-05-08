@@ -49,3 +49,25 @@
 // const a = new Set(['a', 'b', 'c']);
 // const b = new Set(['c', 'b', 'a']);
 // console.log(a);
+
+// const name = function () {
+//   console.log('Nenu Name Function Ni?!');
+// };
+
+// function callName(name) {
+//   name;
+// }
+
+// callName(name());
+
+// function a() {
+//   return function b() {
+//     console.log('Boww!!!');
+//   };
+// }
+// a()();
+// function operate(x, y, operation) {
+//   return operation(x, y);
+// }
+// const add = (a, b) => a + b;
+// console.log(operate(5, 3, add)); // Output: 8
