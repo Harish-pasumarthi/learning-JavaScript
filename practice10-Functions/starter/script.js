@@ -45,3 +45,7 @@
 // }
 // modify(obj);
 // console.log(obj.a); // 2
+
+// const a = new Set(['a', 'b', 'c']);
+// const b = new Set(['c', 'b', 'a']);
+// console.log(a);
