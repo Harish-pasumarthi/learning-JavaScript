@@ -37,3 +37,11 @@
 
 // const ran = Math.trunc(Math.random() * 10000);
 // console.log(ran);
+// let obj = { a: 1 };
+// function modify(o) {
+//   o.a = 2; // ✅ affects original
+//   o = { a: 3 }; // ❌ only local reference changes
+//   console.log(o);
+// }
+// modify(obj);
+// console.log(obj.a); // 2
