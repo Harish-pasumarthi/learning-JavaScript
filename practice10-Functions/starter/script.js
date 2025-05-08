@@ -12,3 +12,16 @@
 // };
 // console.log(bookings);
 // createBookings();
+
+// let obj = { name: 'Harish' };
+
+// function mutate(o) {
+//   o.name = 'Updated'; // ✅ mutation: affects original
+//   console.log(o);
+
+//   o = { name: 'New' }; // ❌ reassignment: doesn't affect original
+//   console.log(o);
+// }
+
+// mutate(obj);
+// console.log(obj, 'hi'); // ➡️ "Updated"
