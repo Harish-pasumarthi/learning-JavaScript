@@ -25,3 +25,15 @@
 
 // mutate(obj);
 // console.log(obj, 'hi'); // ➡️ "Updated"
+
+// const flight = 'LH234';
+// const harish = {
+//   name: 'Harish pasumarthi',
+//   passport: 2424212322,
+// };
+
+// const checkIn = function (flightNum, passenger) {};
+// checkIn(flight, harish);
+
+// const ran = Math.trunc(Math.random() * 10000);
+// console.log(ran);
