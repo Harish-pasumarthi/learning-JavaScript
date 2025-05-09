@@ -71,3 +71,12 @@
 // }
 // const add = (a, b) => a + b;
 // console.log(operate(5, 3, add)); // Output: 8
+// const firstArrow = greet => name => console.log(`${greet} ${name}`);
+// firstArrow('Hey')('Harish !?');
+// function greet(greeting) {
+//   console.log(greeting + ', ' + this.name);
+// }
+
+// const person = { name: 'Harish' };
+
+// greet.call(person, 'Hello'); // Hello, Harish
