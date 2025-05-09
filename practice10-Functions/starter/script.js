@@ -96,3 +96,20 @@
 // const valAdd = addtax(0.23);
 // console.log(valAdd(200));
 // console.log(200 + 200 * 0.23);
+// let a = 'hi';
+// const fun = () => console.log(a);
+// fun();
+// a = 'bye';
+// fun();
+
+// {
+//   // show message
+//   let message = 'Hello';
+//   alert(message);
+// }
+
+// {
+//   // show another message
+//   let message = 'Goodbye';
+//   alert(message);
+// }
