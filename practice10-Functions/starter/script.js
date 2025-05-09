@@ -86,3 +86,13 @@
 
 // const a = greet.bind(null, undefined, 'apple');
 // a('harish');
+
+const addtax = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const valAdd = addtax(0.23);
+console.log(valAdd(200));
+console.log(200 + 200 * 0.23);
