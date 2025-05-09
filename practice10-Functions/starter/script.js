@@ -80,3 +80,9 @@
 // const person = { name: 'Harish' };
 
 // greet.call(person, 'Hello'); // Hello, Harish
+// const greet = function (wish, name) {
+//   console.log(wish, name);
+// };
+
+// const a = greet.bind(null, undefined, 'apple');
+// a('harish');
