@@ -147,3 +147,23 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 
 GOOD LUCK 😀
 */
+
+// Closures
+const secureBooking = function () {
+  let passengerCount = 0;
+  console.log('hi');
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+// const booker = secureBooking();
+
+// booker();
+// booker();
+// booker();
+
+console.log(secureBooking());
+secureBooking();
+secureBooking();
