@@ -74,3 +74,10 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+// const fruits = ['apple', 'banana', 'cherry', 'date'];
+// console.log(fruits);
+// const removed = fruits.splice(1, 0, 'blueberry', 'a', 'b');
+// // removes 2 items from index 1, and inserts 'blueberry', 'kiwi'
+
+// console.log(removed); // Output: ['banana', 'cherry']
+// console.log(fruits); // Modified: ['apple', 'blueberry', 'kiwi', 'date']
