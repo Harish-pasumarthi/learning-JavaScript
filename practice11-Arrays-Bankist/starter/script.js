@@ -86,19 +86,19 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const eurToUsd = 1.1;
-const movementsUSD = movements.map(mov => mov * eurToUsd);
+// const eurToUsd = 1.1;
+// const movementsUSD = movements.map(mov => mov * eurToUsd);
 
-const movementsUSDfor = [];
-for (const mov of movements) {
-  movementsUSDfor.push(mov * eurToUsd);
-}
+// const movementsUSDfor = [];
+// for (const mov of movements) {
+//   movementsUSDfor.push(mov * eurToUsd);
+// }
 
-const movementsDescpritions = movements.map((mov, i) =>
-  mov > 0
-    ? `Movement ${i + 1}: You deposited ${mov}`
-    : `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`
-);
+// const movementsDescpritions = movements.map((mov, i) =>
+//   mov > 0
+//     ? `Movement ${i + 1}: You deposited ${mov}`
+//     : `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`
+// );
 /////////////////////////////////////////////////
