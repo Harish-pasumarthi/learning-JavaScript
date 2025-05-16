@@ -76,6 +76,19 @@ const dispalyMovements = function (movements) {
 };
 dispalyMovements(account1.movements);
 
+//Creating usernames
+const createUsernames = function (accs) {
+  accs.forEach(acc => {
+    acc.username = acc.owner
+      .toLocaleLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+    console.log(acc);
+  });
+};
+createUsernames(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -102,15 +115,3 @@ const currencies = new Map([
 //     : `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`
 // );
 /////////////////////////////////////////////////
-
-const createUsernames = function (accs) {
-  accs.forEach(acc => {
-    acc.username = acc.owner
-      .toLocaleLowerCase()
-      .split(' ')
-      .map(name => name[0])
-      .join('');
-    console.log(acc);
-  });
-};
-createUsernames(accounts);
