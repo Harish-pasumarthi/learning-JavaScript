@@ -87,7 +87,7 @@ const createUsernames = function (accs) {
     console.log(acc);
   });
 };
-createUsernames(accounts);
+// createUsernames(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -101,6 +101,7 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+// {
 // const eurToUsd = 1.1;
 // const movementsUSD = movements.map(mov => mov * eurToUsd);
 
@@ -114,4 +115,20 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //     ? `Movement ${i + 1}: You deposited ${mov}`
 //     : `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`
 // );
+// }
+
+const deposits = movements.filter(mov => mov > 0);
+console.log('movements:', movements);
+console.log('Deposits:', deposits);
+
+const withdrawal = movements.filter(mov => mov < 0);
+console.log('movements:', movements);
+console.log('withdrawal:', withdrawal);
+//Doing the above same thing in for of loop
+// const depo = [];
+// for (const mov of movements) {
+//   mov < 0 ? depo.push(mov) : '';
+// }
+// console.log(depo);
+
 /////////////////////////////////////////////////
