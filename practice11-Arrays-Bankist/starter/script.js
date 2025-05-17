@@ -84,10 +84,9 @@ const createUsernames = function (accs) {
       .split(' ')
       .map(name => name[0])
       .join('');
-    console.log(acc);
   });
 };
-// createUsernames(accounts);
+createUsernames(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
