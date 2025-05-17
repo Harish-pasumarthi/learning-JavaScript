@@ -117,13 +117,13 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // );
 // }
 
-const deposits = movements.filter(mov => mov > 0);
-console.log('movements:', movements);
-console.log('Deposits:', deposits);
+// const deposits = movements.filter(mov => mov > 0);
+// console.log('movements:', movements);
+// console.log('Deposits:', deposits);
 
-const withdrawal = movements.filter(mov => mov < 0);
-console.log('movements:', movements);
-console.log('withdrawal:', withdrawal);
+// const withdrawal = movements.filter(mov => mov < 0);
+// console.log('movements:', movements);
+// console.log('withdrawal:', withdrawal);
 //Doing the above same thing in for of loop
 // const depo = [];
 // for (const mov of movements) {
