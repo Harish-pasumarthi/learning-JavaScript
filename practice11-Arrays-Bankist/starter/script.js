@@ -6,7 +6,7 @@
 // Data
 const account0 = {
   owner: 'Harish Pasumarthi',
-  movements: [2000, 450, -400, 3000, -60, -10, 700, 1300],
+  movements: [200000, 450, -400, 3000, -60, -10, 700, 1300],
   interestRate: 0.2,
   pin: 'hp',
 };
@@ -83,9 +83,9 @@ const dispalyMovements = function (movements) {
 };
 
 //Dispaly balance
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov);
-  labelBalance.textContent = `${balance} \u20B9`;
+const calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov);
+  labelBalance.textContent = `${acc.balance} \u20B9`;
 };
 
 //Displaying the Sunmary
@@ -120,6 +120,15 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+const updateUI = function (currentAccount) {
+  //Display movements
+  dispalyMovements(currentAccount.movements);
+  //Display balance
+  calcDisplayBalance(currentAccount);
+  //Display Summary
+  calcDisplaySummary(currentAccount);
+};
+
 //Event Handler
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
@@ -138,15 +147,33 @@ btnLogin.addEventListener('click', function (e) {
     //Clear the input Fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
-    //Display movements
-    dispalyMovements(currentAccount.movements);
-    //Display balance
-    calcDisplayBalance(currentAccount.movements);
-    //Display Summary
-    calcDisplaySummary(currentAccount);
+
+    //Update UI
+    updateUI(currentAccount);
   }
 });
 
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  inputTransferAmount.value = inputTransferTo.value = '';
+  if (
+    amount > 0 &&
+    receiverAcc &&
+    currentAccount.balance >= amount &&
+    receiverAcc.username !== currentAccount?.username
+  ) {
+    //Doing the transfer
+    console.log('transfered Amount to ', receiverAcc.owner, 'Rupees:', amount);
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+    //Update UI
+    updateUI(currentAccount);
+  }
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
