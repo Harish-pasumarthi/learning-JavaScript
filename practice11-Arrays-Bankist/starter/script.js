@@ -4,6 +4,13 @@
 // BANKIST APP
 
 // Data
+const account0 = {
+  owner: 'Harish Pasumarthi',
+  movements: [2000, 450, -400, 3000, -60, -10, 700, 1300],
+  interestRate: 0.2,
+  pin: 'hp',
+};
+
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -32,7 +39,7 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+const accounts = [account0, account1, account2, account3, account4];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -69,40 +76,37 @@ const dispalyMovements = function (movements) {
       i + 1
     } ${type}</div>
           <div class="movements__date">1 minute ago</div>
-          <div class="movements__value">${mov}€</div>
+          <div class="movements__value">${mov}\u20B9</div>
         </div>`;
     containerMovements.insertAdjacentHTML('afterBegin', html);
   });
 };
-dispalyMovements(account1.movements);
 
 //Dispaly balance
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov);
-  labelBalance.textContent = `${balance} rupees`;
+  labelBalance.textContent = `${balance} \u20B9`;
 };
-calcDisplayBalance(account1.movements);
 
 //Displaying the Sunmary
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes} 💶`;
+  labelSumIn.textContent = `${incomes} \u20B9`;
 
-  const out = movements
+  const out = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out)} 💶`;
+  labelSumOut.textContent = `${Math.abs(out)} \u20B9`;
 
-  const interest = movements
+  const interest = acc.movements
     .filter(mov => mov > 0)
-    .map(deposit => (deposit * 1.2) / 100)
+    .map(deposit => (deposit * acc.interestRate) / 100)
     .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest} 💶`;
+  labelSumInterest.textContent = `${interest} \u20B9`;
 };
-calcDisplaySummary(account1.movements);
 
 //Creating usernames
 const createUsernames = function (accs) {
@@ -115,6 +119,33 @@ const createUsernames = function (accs) {
   });
 };
 createUsernames(accounts);
+
+//Event Handler
+let currentAccount;
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+  if (currentAccount?.pin === inputLoginPin.value) {
+    //Display UI and Welcome message
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+    //Clear the input Fields
+    inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin.blur();
+    //Display movements
+    dispalyMovements(currentAccount.movements);
+    //Display balance
+    calcDisplayBalance(currentAccount.movements);
+    //Display Summary
+    calcDisplaySummary(currentAccount);
+  }
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
