@@ -4,13 +4,6 @@
 // BANKIST APP
 
 // Data
-const account0 = {
-  owner: 'Harish Pasumarthi',
-  movements: [200000, 450, -400, 3000, -60, -10, 700, 1300],
-  interestRate: 0.2,
-  pin: 'hp',
-};
-
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -39,7 +32,7 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account0, account1, account2, account3, account4];
+const accounts = [account1, account2, account3, account4];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -133,12 +126,11 @@ const updateUI = function (currentAccount) {
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
-
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
-  if (currentAccount?.pin === inputLoginPin.value) {
+  // console.log(currentAccount);
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
     //Display UI and Welcome message
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
@@ -167,14 +159,30 @@ btnTransfer.addEventListener('click', function (e) {
     receiverAcc.username !== currentAccount?.username
   ) {
     //Doing the transfer
-    console.log('transfered Amount to ', receiverAcc.owner, 'Rupees:', amount);
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
     //Update UI
     updateUI(currentAccount);
   }
 });
-/////////////////////////////////////////////////
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+    //Delete Account
+    accounts.splice(index, 1);
+    //Hide UI
+    containerApp.style.opacity = 0;
+  }
+  inputCloseUsername.value = inputClosePin.value = '';
+});
+
 /////////////////////////////////////////////////
 // LECTURES
 
@@ -185,35 +193,5 @@ const currencies = new Map([
 ]);
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
-// {
-// const eurToUsd = 1.1;
-// const movementsUSD = movements.map(mov => mov * eurToUsd);
-
-// const movementsUSDfor = [];
-// for (const mov of movements) {
-//   movementsUSDfor.push(mov * eurToUsd);
-// }
-
-// const movementsDescpritions = movements.map((mov, i) =>
-//   mov > 0
-//     ? `Movement ${i + 1}: You deposited ${mov}`
-//     : `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`
-// );
-// }
-
-// const deposits = movements.filter(mov => mov > 0);
-// console.log('movements:', movements);
-// console.log('Deposits:', deposits);
-
-// const withdrawal = movements.filter(mov => mov < 0);
-// console.log('movements:', movements);
-// console.log('withdrawal:', withdrawal);
-//Doing the above same thing in for of loop
-// const depo = [];
-// for (const mov of movements) {
-//   mov < 0 ? depo.push(mov) : '';
-// }
-// console.log(depo);
 
 /////////////////////////////////////////////////
