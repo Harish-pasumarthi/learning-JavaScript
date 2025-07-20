@@ -67,3 +67,17 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+//-------------------------------------------------------------------
+// CREATING TABBED COMPONENT
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelectorAll('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+//---BAD PRACTICE---
+// tabs.forEach(t =>
+//   t.addEventListener('click', () => {
+//     console.log('hi');
+//   })
+// );
+//-------------------------------------------------------------------
