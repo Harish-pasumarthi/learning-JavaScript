@@ -45,3 +45,25 @@ btnScrollTo.addEventListener('click', function (e) {
   // ------------------MODERN WAY SMOOTH SCROLLING---------------
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+// NORMAL WAY OF IMPLEMENTING SMOOTH SCROLLING FOR LIST OF ELEMENTS WITHOUT EVENT DELIOGATION
+
+// document.querySelectorAll('.nav__link').forEach(el => {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+//   section1.scrollIntoView({ behavior: 'smooth' });
+// });
+
+// USING THE EVENT DELIGATION
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  // MATCHING STATEGY
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
