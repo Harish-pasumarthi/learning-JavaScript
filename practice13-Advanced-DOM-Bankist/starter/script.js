@@ -71,7 +71,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 //-------------------------------------------------------------------
 // CREATING TABBED COMPONENT
 const tabs = document.querySelectorAll('.operations__tab');
-const tabsContainer = document.querySelectorAll('.operations__tab-container');
+const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
 //---BAD PRACTICE---
@@ -80,4 +80,25 @@ const tabsContent = document.querySelectorAll('.operations__content');
 //     console.log('hi');
 //   })
 // );
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked);
+
+  //GUARD CLASS
+  if (!clicked) return;
+
+  //if clicked--Remove active class to all tabs and content
+  //tab active remove
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  //content active remove
+  tabsContent.forEach(t => t.classList.remove('operations__content--active'));
+
+  //Add active class to clicked TAB
+  clicked.classList.add('operations__tab--active');
+
+  //iAdd active class to content according to clicked tab
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
 //-------------------------------------------------------------------
