@@ -63,7 +63,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   // MATCHING STATEGY
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href');
-    console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
@@ -82,7 +81,6 @@ const tabsContent = document.querySelectorAll('.operations__content');
 // );
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
-  console.log(clicked);
 
   //GUARD CLASS
   if (!clicked) return;
@@ -110,7 +108,6 @@ const nav = document.querySelector('.nav');
 nav.addEventListener('mouseover', function (e) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    console.log(link);
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
     siblings.forEach(el => {
       if (el !== link) {
@@ -123,10 +120,24 @@ nav.addEventListener('mouseover', function (e) {
 nav.addEventListener('mouseout', function (e) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    console.log(link);
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
     siblings.forEach(el => {
       if (el !== link) el.style.opacity = 1;
     });
   }
 });
+//------------------------------------------------------
+
+//stick navigation
+
+//the BAD-WAY-------------------------
+// const initialCoords = section1.getBoundingClientRect();
+
+// window.addEventListener('scroll', function (e) {
+//   if (window.scrollY > initialCoords.top) {
+//     nav.classList.add('sticky');
+//   } else {
+//     nav.classList.remove('sticky');
+//   }
+// });
+//--------------------------------------
