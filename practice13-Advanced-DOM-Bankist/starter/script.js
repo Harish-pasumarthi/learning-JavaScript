@@ -128,7 +128,7 @@ nav.addEventListener('mouseout', function (e) {
 });
 //------------------------------------------------------
 
-//stick navigation
+//stick navigation -----START
 
 //the BAD-WAY-------------------------
 // const initialCoords = section1.getBoundingClientRect();
@@ -140,4 +140,19 @@ nav.addEventListener('mouseout', function (e) {
 //     nav.classList.remove('sticky');
 //   }
 // });
+
+//using Intersection observer API
+// const obsCallback = function (entries, observer) {
+//   entries.forEach(entry => {
+//     console.log(entry);
+//   });
+// };
+
+// const obsOptions = {
+//   root: null,
+//   threshold: 0.1,
+// };
+
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
 //--------------------------------------
