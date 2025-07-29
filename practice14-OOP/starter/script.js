@@ -43,3 +43,24 @@ GOOD LUCK 😀
 // car1.accelerate();
 // car1.brake();
 //------------------------------------------------------------------
+
+//Classes:
+
+// class Person {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+//   welcome() {
+//     console.log(`PERSON DETAILS:`);
+//     return this;
+//   }
+
+//   fullName() {
+//     console.log(`🙏🏻 Welcome ${this.firstName} ${this.lastName}`);
+//   }
+// }
+
+// const object1 = new Person('Harish', 'Pasumarthi');
+// object1.welcome().fullName();
+// console.log(object1);
