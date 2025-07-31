@@ -64,3 +64,13 @@ GOOD LUCK 😀
 // const object1 = new Person('Harish', 'Pasumarthi');
 // object1.welcome().fullName();
 // console.log(object1);
+// const Person = {
+//   greet() {
+//     console.log('you are using the person Class---ALL HAIL THE TIGER');
+//   },
+// };
+
+// const ramu = Object.create(Person);
+// ramu.name = 'kasi';
+// console.log(ramu);
+// ramu.greet();
