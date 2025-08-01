@@ -46,10 +46,27 @@ const renderCountry = function (data) {
 // const request = fetch(`https://restcountries.com/v2/name/${country}`);
 // console.log(request);
 
-const getCountryData = function (country) {
-  fetch(`https://restcountries.com/v2/name/${country}`)
-    .then(res => res.json())
-    .then(data => renderCountry(data))
-    .catch(error => console.error(`this is error: ${error}`));
-};
-getCountryData('india');
+// const getCountryData = function (country) {
+//   fetch(`https://restcountries.com/v2/name/${country}`)
+//     .then(res => res.json())
+//     .then(data => renderCountry(data))
+//     .catch(error => console.error(`this is error: ${error}`));
+// };
+
+// getCountryData('india');
+
+// const getCountryByCoords = async (lat, lng) => {
+//   const apiKey = 'YOUR_API_KEY'; // Get this from https://opencagedata.com
+//   const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey}`;
+
+//   try {
+//     const res = await fetch(url);
+//     const data = await res.json();
+//     const country = data.results[0].components.country;
+//     console.log('Country:', country);
+//   } catch (err) {
+//     console.error('Error:', err);
+//   }
+// };
+
+// getCountryByCoords(28.6139, 77.209); // Example: New Delhi, India
