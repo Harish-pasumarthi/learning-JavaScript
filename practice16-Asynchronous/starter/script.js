@@ -3,27 +3,14 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
-// const renderCountry = function (data) {
-//   const html = `<article class="country">
-//             <img class="country__img" src="${data.flag}" />
-//             <div class="country__data">
-//                 <h3 class="country__name">${data.name}</h3>
-//                 <h4 class="country__region">${data.region}</h4>
-//                 <p class="country__row"><span>👫</span>${(
-//                   data.population / 1_000_000
-//                 ).toFixed(1)} million</p>
-//                 <p class="country__row"><span>🗣️</span>${
-//                   data.languages[0].nativeName
-//                 }</p>
-//                 <p class="country__row"><span>💰</span>${
-//                   data.currencies[0].name
-//                 }</p>
-//             </div>
-//             </article>`;
+const renderCountry = function (data) {
+  const html = `<article class="country">
+            <img class="country__img" src="${data[0].flag}" />
+            </article>`;
 
-//   countriesContainer.insertAdjacentHTML('beforeend', html);
-//   countriesContainer.style.opacity = 1;
-// };
+  countriesContainer.insertAdjacentHTML('beforeend', html);
+  countriesContainer.style.opacity = 1;
+};
 
 // const getCountryAndNeighbour = function (country) {
 //   const request = new XMLHttpRequest();
@@ -55,6 +42,14 @@ const countriesContainer = document.querySelector('.countries');
 // getCountryAndNeighbour('india');
 
 //PROMISES
-const country = prompt('Enter Country Name:');
-const request = fetch(`https://restcountries.com/v2/name/${country}`);
-console.log(request);
+// const country = prompt('Enter Country Name:');
+// const request = fetch(`https://restcountries.com/v2/name/${country}`);
+// console.log(request);
+
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v2/name/${country}`)
+    .then(res => res.json())
+    .then(data => renderCountry(data))
+    .catch(error => console.error(`this is error: ${error}`));
+};
+getCountryData('india');
