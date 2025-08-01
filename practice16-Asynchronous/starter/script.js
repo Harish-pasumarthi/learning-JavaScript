@@ -70,3 +70,46 @@ const renderCountry = function (data) {
 // };
 
 // getCountryByCoords(28.6139, 77.209); // Example: New Delhi, India
+// console.log('Start');
+
+// setTimeout(() => {
+//   console.log('Timeout');
+// }, 1000);
+
+// console.log('End');
+// async function greet() {
+//   return 'Hello';
+// }
+// console.log(greet());
+// greet().then(msg => console.log(msg)); // Output: Hello
+// function wait() {
+//   return new Promise(resolve => setTimeout(() => resolve('Done!'), 1000));
+// }
+// wait().then(msg => console.log(msg));
+
+// async function run() {
+//   console.log('Start');
+//   const result = await wait(); // Waits 1 second
+//   console.log(result); // Prints: Done!
+//   console.log('End');
+// }
+// // run();
+// const p1 = new Promise(resolve => setTimeout(() => resolve('🚀 Fast!'), 100));
+// const p2 = new Promise(resolve => setTimeout(() => resolve('🐢 Slow!'), 500));
+
+// Promise.race([p1, p2]).then(res => console.log(res)); // 🚀 Fast!
+// const promises = [
+//   Promise.resolve('✅ Done'),
+//   Promise.reject('❌ Failed'),
+//   Promise.resolve('✅ Again'),
+// ];
+
+// Promise.allSettled(promises).then(results => {
+//   console.log(results);
+// });
+const p1 = Promise.resolve('👍');
+const p2 = Promise.reject('faiol');
+
+Promise.all([p1, p2])
+  .then(console.log)
+  .catch(err => console.error(err)); // ❌
